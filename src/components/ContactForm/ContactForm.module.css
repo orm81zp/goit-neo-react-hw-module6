@@ -1,0 +1,25 @@
+.contactForm {
+  padding: 12px;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form button{
+  flex-grow: 0;
+}
+
+.actions {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+.contactForm {
+    max-width: 380px;
+  }
+}

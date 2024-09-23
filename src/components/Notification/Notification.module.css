@@ -1,0 +1,17 @@
+.notification {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 16px 0;
+}
+
+.notification.info {
+  color: blueviolet;
+}
+
+.notification.error {
+  color: red;
+}
+
+.notification.success {
+  color: green;
+}
