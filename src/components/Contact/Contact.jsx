@@ -1,15 +1,18 @@
 import { FaUser } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
+import { useDispatch } from "react-redux";
+import { deleteContact } from "../../redux/contactsSlice";
 import { isApproved } from "../../utils/confirm";
 import Button from "../Button/Button";
 import css from "./Contact.module.css";
 
-const Contact = ({ contact, onDelete }) => {
+const Contact = ({ contact }) => {
+  const dispatch = useDispatch();
   const { id, name, number } = contact;
 
   const handleClick = () => {
     if (isApproved("Do you want to delete?")) {
-      onDelete(id);
+      dispatch(deleteContact(id));
     }
   };
 
